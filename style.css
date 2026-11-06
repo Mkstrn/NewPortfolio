@@ -2,6 +2,7 @@
 
 /* Fonts */
 
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Gabriela&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 /* Background color and setting up flexbox*/
@@ -44,7 +45,7 @@ nav ul li a {
     /* Current Page*/
 nav ul li a.current {
     background-color: #7B7F8A;
-    color: white;
+    color: #E9E6E7;
     width: 100px;
     border-radius: 20px;
     text-align: center;
@@ -70,7 +71,7 @@ nav ul li a.current {
 .boxed-text:hover {
     transition-delay: 0.1s;
     background-color: #7B7F8A;
-    color: white;
+    color: #E9E6E7;
 }
 
     /* Responsive Design */
@@ -94,4 +95,18 @@ nav ul li a.current {
 body {
     margin: 0;
     padding: 0;
+}
+
+#dp {
+    font-family: 'Gabriela', serif;
+    text-align: center;
+    color: #E9E6E7;
+}
+
+#dp h1 {
+    font-size: 100px;
+}
+
+#dp h2 {
+    font-size: 80px;
 }
