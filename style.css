@@ -4,13 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Gabriela&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Gabriela&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-/* Background color and setting up flexbox*/
-
-body {
-    background-color: #6B7C98;
-
-}
 
 /* Navigation */
 
@@ -93,10 +88,12 @@ nav ul li a.current {
 /* Styling the Body */
 
 body {
-    margin: 0;
+    margin: 0px;
     padding: 0;
+    background-color: #6B7C98;
 }
 
+    /* Accessibility Motto */
 #dp {
     font-family: 'Gabriela', serif;
     text-align: center;
@@ -109,4 +106,30 @@ body {
 
 #dp h2 {
     font-size: 80px;
+}
+
+    /* Mini About Me */
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+#sm-abt-me {
+    margin: 30px;
+}
+
+#sm-abt-me h1 {
+    font-family: 'Inter', serif; /*change to helvetica*/
+    text-align: left;
+    color: #E9E6E7;
+    font-size: 50px;
+}
+
+#sm-abt-me img {
+    width: 400px;
+    height: auto;
+    border: solid;
+    border-width: 10px;
+    border-radius: 20px;
+    border-color:#5E5653;
 }
