@@ -1,0 +1,97 @@
+
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Background color and setting up flexbox*/
+
+body {
+    background-color: #6B7C98;
+
+}
+
+/* Navigation */
+
+    /*Styles the unordered list inside the navigation bar */
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #5E5653;
+    margin: 0;
+    padding: 0;
+}
+
+    /* Nav list items */
+nav ul li {
+    list-style-type: none;
+
+}
+
+    /* Styles the clickable links inside the nav bar*/
+nav ul li a {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color:rgb(53, 53, 53);
+    font-family: 'Epunda Slab', serif;
+    font-weight: 500;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+    /* Current Page*/
+nav ul li a.current {
+    background-color: #7B7F8A;
+    color: white;
+    width: 100px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+    /* Current Page Hover*/
+.current:hover {
+    transition-delay: 0.1s;
+    background-color: #646770;
+}
+
+    /* Creating the Boxes around Links*/
+.boxed-text {
+    background-color: #E9E6E7;
+    width: 100px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+    /* Boxed Hover */
+.boxed-text:hover {
+    transition-delay: 0.1s;
+    background-color: #7B7F8A;
+    color: white;
+}
+
+    /* Responsive Design */
+@media screen and (min-width: 769px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    /* Last Nav Item */
+    nav ul li:last-child {
+        margin-left: auto;
+        padding-right: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Styling the Body */
+
+body {
+    margin: 0;
+    padding: 0;
+}
