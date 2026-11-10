@@ -133,3 +133,21 @@ body {
     border-radius: 20px;
     border-color:#5E5653;
 }
+
+#sm-abt-me p {
+    border: solid;
+    border-width: 10px;
+    border-radius: 20px;
+    border-color: #AB978C;
+    background-color: #E9E6E7;
+    text-align: center;
+    font-family: inter;
+}
+
+    /* Portfolio Preview */
+
+
+    /* Primary Skills */
+
+
+    /* Secondary Skills */
