@@ -10,6 +10,12 @@
 /* Navigation */
 
     /*Styles the unordered list inside the navigation bar */
+nav {
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+
 nav ul {
     display: flex;
     flex-direction: column;
@@ -126,9 +132,9 @@ body {
     justify-content:center;
 }
 
-#abt {
-    font-family: 'Inter', serif; /*change to helvetica*/
-    text-align: left;
+#heading {
+    font-family: 'Gabriela', serif; 
+    text-align: center;
     color: #E9E6E7;
     font-size: 50px;
     padding: 2rem;
@@ -167,13 +173,6 @@ body {
 
 
     /* Portfolio Preview */
-#sp h2 {
-   font-family: 'Gabriela', serif; 
-    text-align: center;
-    color: #E9E6E7;
-    font-size: 50px;
-    padding: 2rem; 
-}
 
 #sp div {
     margin: 30px;
@@ -195,13 +194,6 @@ body {
 }
 
     /* Primary Skills */
-#ps h2 {
-   font-family: 'Gabriela', serif; 
-    text-align: center;
-    color: #E9E6E7;
-    font-size: 50px;
-    padding: 2rem; 
-}
 
 #ps div {
     margin: 30px;
@@ -223,13 +215,6 @@ body {
 }
 
     /* Secondary Skills */
-#ss h2 {
-   font-family: 'Gabriela', serif; 
-    text-align: center;
-    color: #E9E6E7;
-    font-size: 50px;
-    padding: 2rem; 
-}
 
 #ss div {
     margin: 30px;
@@ -258,13 +243,6 @@ body {
     padding: 20px;
 }
 
-/* Form heading */
-.mail h1 {
-    font-family: 'Gabriela', serif;
-    text-align: center;
-    color: #E9E6E7;
-    margin-bottom: 50px;
-}
 
 /* Form layout */
 #mail {
