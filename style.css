@@ -69,6 +69,13 @@ nav ul li a.current {
     color: #E9E6E7;
 }
 
+.logo {
+    background-color: #E9E6E7;
+    width: 200px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+}
     /* Responsive Design */
 @media screen and (min-width: 769px) {
     nav ul {
@@ -110,44 +117,206 @@ body {
 
     /* Mini About Me */
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-}
+
 #sm-abt-me {
     margin: 30px;
+    display:flex;
+    gap: 200px;
+    flex:1;
+    justify-content:center;
 }
 
-#sm-abt-me h1 {
+#abt {
     font-family: 'Inter', serif; /*change to helvetica*/
     text-align: left;
     color: #E9E6E7;
     font-size: 50px;
+    padding: 2rem;
 }
 
 #sm-abt-me img {
-    width: 400px;
-    height: auto;
+    width:100%;
+    max-width: 400px;
+    max-height: auto;
     border: solid;
-    border-width: 10px;
+    border-width: 5px;
     border-radius: 20px;
     border-color:#5E5653;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
 }
 
 #sm-abt-me p {
+    text-align: center;
+    font-family: 'inter', serif;
+    max-width: 400px;
+    font-family: 'Inter', serif; /*change to helvetica*/
+    text-align: left;
+    text-indent: 2em;
+    padding: 1rem;
+}
+
+#sm-abt-me div {
     border: solid;
-    border-width: 10px;
+    border-width: 5px;
     border-radius: 20px;
     border-color: #AB978C;
     background-color: #E9E6E7;
-    text-align: center;
-    font-family: inter;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
 }
 
-    /* Portfolio Preview */
 
+
+    /* Portfolio Preview */
+#sp h2 {
+   font-family: 'Gabriela', serif; 
+    text-align: center;
+    color: #E9E6E7;
+    font-size: 50px;
+    padding: 2rem; 
+}
+
+#sp div {
+    margin: 30px;
+    display:flex;
+    gap: 200px;
+    flex:1;
+    justify-content:center;
+}
+
+#sp p {
+    border: solid;
+    border-width: 5px;
+    border-radius: 100%;
+    border-color: #AB978C;
+    background-color: #E9E6E7;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+    max-width: 10rem;
+    height: auto;
+}
 
     /* Primary Skills */
+#ps h2 {
+   font-family: 'Gabriela', serif; 
+    text-align: center;
+    color: #E9E6E7;
+    font-size: 50px;
+    padding: 2rem; 
+}
 
+#ps div {
+    margin: 30px;
+    display:flex;
+    gap: 200px;
+    flex:1;
+    justify-content:center;
+}
+
+#ps p {
+    border: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #AB978C;
+    background-color: #E9E6E7;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+    max-width: 10rem;
+    height: auto;
+}
 
     /* Secondary Skills */
+#ss h2 {
+   font-family: 'Gabriela', serif; 
+    text-align: center;
+    color: #E9E6E7;
+    font-size: 50px;
+    padding: 2rem; 
+}
+
+#ss div {
+    margin: 30px;
+    display:flex;
+    gap: 200px;
+    flex:1;
+    justify-content:center;
+}
+
+#ss p {
+    border: solid;
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #AB978C;
+    background-color: #E9E6E7;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+    max-width: 10rem;
+    height: auto;
+}
+
+/* Contact Me */
+/* Main form container */
+.mail {
+    border-radius: 5px;
+    background-color: #6B7C98;
+    padding: 20px;
+}
+
+/* Form heading */
+.mail h1 {
+    font-family: 'Gabriela', serif;
+    text-align: center;
+    color: #E9E6E7;
+    margin-bottom: 50px;
+}
+
+/* Form layout */
+#mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gabriela', serif;
+    color: #E9E6E7;
+    padding: 2rem;
+}
+
+/* Individual label and input groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-bottom: 16px;
+}
+
+/* Labels */
+.form-group label {
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+/* Input boxes and textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Message box */
+.form-group textarea {
+    height: 200px;
+    resize: vertical;
+}
+
+/* Submit button */
+#mail input[type="submit"] {
+    background-color: #AB978C;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+#mail input[type="submit"]:hover {
+    background-color: #5e5653;
+}
