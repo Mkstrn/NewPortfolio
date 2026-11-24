@@ -1,300 +1,585 @@
 
+/* ========================================
+   1. GOOGLE FONTS
+======================================== */
 
-/* Fonts */
-
-@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Gabriela&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Gabriela&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:wght@300..900&family=Gabriela&family=Inter:wght@400;500;600;700&display=swap');
 
 
-/* Navigation */
+/* ========================================
+   2. ROOT VARIABLES
+======================================== */
 
-    /*Styles the unordered list inside the navigation bar */
+:root {
+    /* Colors */
+    --color-blue: #6B7C98;
+    --color-dark: #5E5653;
+    --color-gray: #7B7F8A;
+    --color-gray-dark: #646770;
+    --color-cream: #E9E6E7;
+    --color-tan: #AB978C;
+    --color-text: #353535;
+
+    /* Fonts */
+    --font-heading: 'Gabriela', serif;
+    --font-nav: 'Epunda Slab', serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+
+    /* Borders and shadows */
+    --border-radius: 20px;
+    --border-width: 5px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   3. GLOBAL STYLES
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-blue);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0;
+}
+
+/* ========================================
+   4. NAVIGATION 
+======================================== */
+
 nav {
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 100;
 }
 
 nav ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background-color: #5E5653;
+    justify-content: center;
+    gap: var(--spacing-xs);
+    background-color: var(--color-dark);
     margin: 0;
-    padding: 0;
+    padding: var(--spacing-sm);
+    list-style: none;
 }
 
-    /* Nav list items */
 nav ul li {
-    list-style-type: none;
-
+    list-style: none;
 }
 
-    /* Styles the clickable links inside the nav bar*/
 nav ul li a {
     display: block;
-    padding: 10px;
-    margin: 10px;
+    padding: 0.65rem 1.25rem;
+    margin: 0.25rem;
+    border-radius: var(--border-radius);
     text-decoration: none;
-    color:rgb(53, 53, 53);
-    font-family: 'Epunda Slab', serif;
+    text-align: center;
+    color: var(--color-text);
+    background-color: var(--color-cream);
+    font-family: var(--font-nav);
     font-weight: 500;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-    /* Current Page*/
+nav ul li a:hover,
+nav ul li a:focus-visible {
+    background-color: var(--color-gray);
+    color: var(--color-cream);
+}
+
+/* Current page */
+
 nav ul li a.current {
-    background-color: #7B7F8A;
-    color: #E9E6E7;
-    width: 100px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+    background-color: var(--color-gray);
+    color: var(--color-cream);
+    min-width: 100px;
 }
 
-    /* Current Page Hover*/
-.current:hover {
-    transition-delay: 0.1s;
-    background-color: #646770;
+/* Hover and keyboard focus */
+
+nav ul li a:hover,
+nav ul li a:focus-visible {
+    background-color: var(--color-gray);
+    color: var(--color-cream);
 }
 
-    /* Creating the Boxes around Links*/
-.boxed-text {
-    background-color: #E9E6E7;
-    width: 100px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+nav ul li a.current:hover {
+    background-color: var(--color-gray-dark);
 }
 
-    /* Boxed Hover */
-.boxed-text:hover {
-    transition-delay: 0.1s;
-    background-color: #7B7F8A;
-    color: #E9E6E7;
-}
+/* Logo */
 
 .logo {
-    background-color: #E9E6E7;
+    background-color: var(--color-cream);
     width: 200px;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     text-align: center;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow);
 }
-    /* Responsive Design */
-@media screen and (min-width: 769px) {
+
+
+/* ========================================
+   5. MAIN HEADINGS
+======================================== */
+
+/* Accessibility motto / Hero section */
+
+#dp {
+    font-family: var(--font-heading);
+    text-align: center;
+    color: var(--color-cream);
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+
+#dp h1 {
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    margin-bottom: var(--spacing-sm);
+}
+
+#dp h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: var(--spacing-md);
+}
+
+/* General section heading */
+
+.heading {
+    font-family: var(--font-heading);
+    text-align: center;
+    color: var(--color-cream);
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1.3;
+    padding: var(--spacing-lg) var(--spacing-sm);
+    margin: 0;
+}
+
+/* ========================================
+   6. MINI ABOUT ME
+======================================== */
+
+#sm-abt-me {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-lg);
+    max-width: 1200px;
+}
+
+#sm-abt-me img {
+    width: 100%;
+    max-width: 400px;
+    border: var(--border-width) solid var(--color-dark);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    object-fit: cover;
+}
+
+#sm-abt-me div {
+    flex: 1 1 300px;
+    max-width: 500px;
+    padding: var(--spacing-lg);
+    border: var(--border-width) solid var(--color-tan);
+    border-radius: var(--border-radius);
+    background-color: var(--color-cream);
+    box-shadow: var(--shadow);
+}
+
+#sm-abt-me p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: left;
+    text-indent: 1.5em;
+    margin: 0;
+}
+
+
+/* ========================================
+   7. PORTFOLIO PREVIEW
+======================================== */
+
+#sp div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-md);
+}
+
+#sp p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: var(--spacing-lg);
+    margin: 0;
+    width: 160px;
+    min-height: 160px;
+    border: var(--border-width) solid var(--color-tan);
+    border-radius: 50%;
+    background-color: var(--color-cream);
+    box-shadow: var(--shadow);
+}
+
+
+/* ========================================
+   8. PRIMARY SKILLS
+======================================== */
+
+#ps div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-md);
+}
+
+#ps p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: var(--spacing-lg);
+    margin: 0;
+    width: 160px;
+    min-height: 120px;
+    border: var(--border-width) solid var(--color-tan);
+    border-radius: var(--border-radius);
+    background-color: var(--color-cream);
+    box-shadow: var(--shadow);
+}
+
+
+/* ========================================
+   9. SECONDARY SKILLS
+======================================== */
+
+#ss div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-md);
+}
+
+#ss p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: var(--spacing-lg);
+    margin: 0;
+    width: 160px;
+    min-height: 120px;
+    border: var(--border-width) solid var(--color-tan);
+    border-radius: var(--border-radius);
+    background-color: var(--color-cream);
+    box-shadow: var(--shadow);
+}
+
+/* =======================
+    10. Beyond the Screen 
+==========================*/
+
+#beyond > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-md);
+}
+
+#beyond p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: var(--spacing-lg);
+    margin: 0;
+    width: 160px;
+    min-height: 120px;
+    border: var(--border-width) solid var(--color-tan);
+    border-radius: var(--border-radius);
+    background-color: var(--color-cream);
+    box-shadow: var(--shadow);
+}
+
+/* ========================================
+   10. CONTACT FORM
+======================================== */
+
+/* Main form container */
+
+.mail {
+    max-width: 800px;
+    width: calc(100% - 2rem);
+    margin: var(--spacing-lg) auto;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    background-color: var(--color-blue);
+}
+
+/* Form layout */
+
+#mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-heading);
+    color: var(--color-cream);
+    padding: var(--spacing-lg);
+}
+
+/* Form groups */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: var(--spacing-md);
+}
+
+/* Labels */
+
+.form-group label {
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+/* Inputs */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.85rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background-color: var(--color-cream);
+}
+
+/* Message box */
+
+.form-group textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+/* Submit button */
+
+#mail input[type="submit"] {
+    background-color: var(--color-tan);
+    color: white;
+    padding: 0.85rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#mail input[type="submit"]:hover,
+#mail input[type="submit"]:focus-visible {
+    background-color: var(--color-dark);
+}
+
+
+/* ========================================
+   11. CONTACT PAGE
+======================================== */
+
+#linkedin {
+    margin: var(--spacing-lg);
+}
+
+
+/* ========================================
+   12. ACCESSIBILITY
+======================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-cream);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   13. RESPONSIVE DESIGN
+======================================== */
+
+/* Tablets and small laptops */
+
+@media screen and (min-width: 600px) {
+
     nav ul {
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;
     }
 
-    /* Last Nav Item */
     nav ul li:last-child {
         margin-left: auto;
-        padding-right: 20px;
-        flex-wrap: wrap;
+        padding-right: var(--spacing-sm);
     }
+
+    #sm-abt-me {
+        gap: var(--spacing-lg);
+    }
+
 }
 
-/* Styling the Body */
+/* Desktop */
 
-body {
-    margin: 0px;
-    padding: 0;
-    background-color: #6B7C98;
+@media screen and (min-width: 900px) {
+
+    #sm-abt-me {
+        gap: var(--spacing-2xl);
+    }
+
+    #sp div,
+    #ps div,
+    #ss div {
+        gap: var(--spacing-xl);
+    }
+
 }
 
-    /* Accessibility Motto */
-#dp {
-    font-family: 'Gabriela', serif;
-    text-align: center;
-    color: #E9E6E7;
-}
+/* Mobile devices */
 
-#dp h1 {
-    font-size: 100px;
-}
+@media screen and (max-width: 599px) {
 
-#dp h2 {
-    font-size: 80px;
-}
+    nav ul {
+        gap: 0.25rem;
+    }
 
-    /* Mini About Me */
+    nav ul li a {
+        margin: 0.2rem;
+        padding: 0.55rem 1rem;
+    }
 
+    #dp {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
 
-#sm-abt-me {
-    margin: 30px;
-    display:flex;
-    gap: 200px;
-    flex:1;
-    justify-content:center;
-}
+    #sm-abt-me {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        margin: var(--spacing-md) auto;
+        padding: 0 var(--spacing-sm);
+    }
 
-#heading {
-    font-family: 'Gabriela', serif; 
-    text-align: center;
-    color: #E9E6E7;
-    font-size: 50px;
-    padding: 2rem;
-}
+    #sm-abt-me img {
+        max-width: 100%;
+    }
 
-#sm-abt-me img {
-    width:100%;
-    max-width: 400px;
-    max-height: auto;
-    border: solid;
-    border-width: 5px;
-    border-radius: 20px;
-    border-color:#5E5653;
-    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
-}
+    #sm-abt-me div {
+        width: 100%;
+        padding: var(--spacing-md);
+    }
 
-#sm-abt-me p {
-    text-align: center;
-    font-family: 'inter', serif;
-    max-width: 400px;
-    font-family: 'Inter', serif; /*change to helvetica*/
-    text-align: left;
-    text-indent: 2em;
-    padding: 1rem;
-}
+    #sm-abt-me p {
+        font-size: 0.95rem;
+    }
 
-#sm-abt-me div {
-    border: solid;
-    border-width: 5px;
-    border-radius: 20px;
-    border-color: #AB978C;
-    background-color: #E9E6E7;
-    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
-}
+    #sp div,
+    #ps div,
+    #ss div {
+        gap: var(--spacing-md);
+        margin: var(--spacing-md) auto;
+    }
 
+    #sp p {
+        width: 135px;
+        min-height: 135px;
+        padding: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
 
+    #ps p,
+    #ss p {
+        width: 135px;
+        min-height: 110px;
+        padding: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
 
-    /* Portfolio Preview */
+    .mail {
+        padding: var(--spacing-sm);
+    }
 
-#sp div {
-    margin: 30px;
-    display:flex;
-    gap: 200px;
-    flex:1;
-    justify-content:center;
-}
+    #mail {
+        padding: var(--spacing-sm);
+    }
 
-#sp p {
-    border: solid;
-    border-width: 5px;
-    border-radius: 100%;
-    border-color: #AB978C;
-    background-color: #E9E6E7;
-    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
-    max-width: 10rem;
-    height: auto;
-}
+    #linkedin {
+        margin: var(--spacing-sm);
+    }
 
-    /* Primary Skills */
-
-#ps div {
-    margin: 30px;
-    display:flex;
-    gap: 200px;
-    flex:1;
-    justify-content:center;
-}
-
-#ps p {
-    border: solid;
-    border-width: 5px;
-    border-radius: 20px;
-    border-color: #AB978C;
-    background-color: #E9E6E7;
-    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
-    max-width: 10rem;
-    height: auto;
-}
-
-    /* Secondary Skills */
-
-#ss div {
-    margin: 30px;
-    display:flex;
-    gap: 200px;
-    flex:1;
-    justify-content:center;
-}
-
-#ss p {
-    border: solid;
-    border-width: 5px;
-    border-radius: 20px;
-    border-color: #AB978C;
-    background-color: #E9E6E7;
-    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
-    max-width: 10rem;
-    height: auto;
-}
-
-/* Contact Me */
-/* Main form container */
-.mail {
-    border-radius: 5px;
-    background-color: #6B7C98;
-    padding: 20px;
-}
-
-
-/* Form layout */
-#mail {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Gabriela', serif;
-    color: #E9E6E7;
-    padding: 2rem;
-}
-
-/* Individual label and input groups */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    margin-bottom: 16px;
-}
-
-/* Labels */
-.form-group label {
-    text-align: left;
-    margin-bottom: 6px;
-}
-
-/* Input boxes and textarea */
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-/* Message box */
-.form-group textarea {
-    height: 200px;
-    resize: vertical;
-}
-
-/* Submit button */
-#mail input[type="submit"] {
-    background-color: #AB978C;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Hover effect */
-#mail input[type="submit"]:hover {
-    background-color: #5e5653;
 }

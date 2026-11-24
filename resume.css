@@ -1,0 +1,393 @@
+
+/* ========================================
+   1. GOOGLE FONTS
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:wght@300..900&family=Gabriela&family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* ========================================
+   2. ROOT VARIABLES
+======================================== */
+
+:root {
+    /* Colors */
+    --color-blue: #6B7C98;
+    --color-dark: #5E5653;
+    --color-gray: #7B7F8A;
+    --color-gray-dark: #646770;
+    --color-cream: #E9E6E7;
+    --color-tan: #AB978C;
+    --color-text: #353535;
+
+    /* Fonts */
+    --font-heading: 'Gabriela', serif;
+    --font-nav: 'Epunda Slab', serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+
+    /* Borders and shadows */
+    --border-radius: 20px;
+    --border-width: 5px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   3. GLOBAL STYLES
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-blue);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    margin-top: 0;
+}
+
+p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 0;
+}
+
+
+/* ========================================
+   4. NAVIGATION
+======================================== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--spacing-xs);
+    background-color: var(--color-dark);
+    margin: 0;
+    padding: var(--spacing-sm);
+    list-style: none;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.65rem 1.25rem;
+    margin: 0.25rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-text);
+    background-color: var(--color-cream);
+    font-family: var(--font-nav);
+    font-weight: 500;
+    box-shadow: var(--shadow);
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+/* Hover and keyboard focus */
+
+nav ul li a:hover,
+nav ul li a:focus-visible {
+    background-color: var(--color-gray);
+    color: var(--color-cream);
+}
+
+/* Current page */
+
+nav ul li a.current {
+    background-color: var(--color-gray);
+    color: var(--color-cream);
+    min-width: 100px;
+}
+
+nav ul li a.current:hover {
+    background-color: var(--color-gray-dark);
+}
+
+/* Logo */
+
+nav ul li:last-child {
+    margin-left: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-cream);
+    width: 200px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+
+/* ========================================
+   5. RESUME PAPER
+======================================== */
+
+.resume {
+    width: min(100% - 2rem, 8.5in);
+    min-height: 11in;
+    margin: 2rem auto;
+    padding: 0.58in 0.72in 0.62in;
+    background: #ffffff;
+    box-shadow: var(--shadow);
+}
+
+.resume-header {
+    margin-bottom: 22px;
+}
+
+.resume-header h1 {
+    margin: 0 0 2px;
+    color: var(--color-dark);
+    font-size: 25pt;
+    line-height: 1.12;
+    font-weight: 400;
+    letter-spacing: -0.45px;
+}
+
+.contact {
+    margin: 0;
+    font-size: 10.5pt;
+}
+
+.contact a {
+    color: var(--color-blue);
+    text-decoration: underline;
+    text-underline-offset: 1px;
+}
+
+.separator {
+    color: #555;
+    padding: 0 2px;
+}
+
+.resume-section {
+    margin: 0 0 15px;
+    scroll-margin-top: 1rem;
+}
+
+.resume-section h2 {
+    margin: 0 0 10px;
+    padding: 0 0 5px;
+    color: var(--color-dark);
+    border-bottom: 1px solid var(--color-tan);
+    font-size: 13pt;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.entry {
+    margin: 0 0 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+.entry-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin: 0 0 5px;
+}
+
+.entry-heading p {
+    margin: 0;
+}
+
+.date {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    text-align: right;
+    font-weight: 700;
+}
+
+.subheading {
+    margin: 0 0 8px;
+}
+
+.resume ul {
+    margin: 0 0 0 28px;
+    padding-left: 17px;
+}
+
+.resume li {
+    padding-left: 3px;
+    margin: 0 0 2px;
+}
+
+.skill-line {
+    margin: 0 0 8px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+/* ========================================
+   6. RESPONSIVE STYLES
+======================================== */
+
+@media (max-width: 640px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+    }
+
+    nav ul li a {
+        padding: 0.55rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .resume {
+        width: 100%;
+        min-height: 100vh;
+        margin: 1rem 0 0;
+        padding: 28px 22px 36px;
+        box-shadow: none;
+    }
+
+    .resume-header h1 {
+        font-size: 23pt;
+    }
+
+    .contact {
+        line-height: 1.65;
+        overflow-wrap: anywhere;
+    }
+
+    .entry-heading {
+        display: block;
+    }
+
+    .date {
+        text-align: left;
+        margin-top: 2px !important;
+    }
+
+    .resume ul {
+        margin-left: 18px;
+    }
+}
+
+
+/* ========================================
+   7. PRINT STYLES
+======================================== */
+
+@page {
+    size: letter;
+    margin: 0;
+}
+
+@media print {
+    html,
+    body {
+        background: #ffffff;
+    }
+
+    body {
+        font-size: 10.5pt;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .resume {
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 0.55in 0.68in 0.55in;
+        box-shadow: none;
+    }
+
+    .resume-header {
+        margin-bottom: 18px;
+    }
+
+    .resume-section {
+        margin-bottom: 12px;
+    }
+
+    .entry {
+        margin-bottom: 8px;
+    }
+}
+
+
+/* ========================================
+   RESUME DOWNLOAD BUTTON
+======================================== */
+
+.resume-download-bar {
+    max-width: 850px; /* Match this to your resume paper width */
+    margin: 0 auto var(--spacing-md);
+    padding-top: var(--spacing-md);
+    text-align: right;
+}
+
+.resume-download {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    background-color: var(--color-dark);
+    color: var(--color-cream);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-family: var(--font-nav);
+    box-shadow: var(--shadow);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.resume-download:hover,
+.resume-download:focus-visible {
+    background-color: var(--color-gray);
+    color: var(--color-cream);
+    transform: translateY(-2px);
+}
